@@ -94,7 +94,27 @@
   .footer {
     padding: 20px;
     text-align: center;
-    background: #326c84;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    color: white
+  }
+  .footer a {    
+    float: center;    
+    display: block;    
+    color: white;    
+    text-align: center;    
+    padding: 14px 20px;    
+    text-decoration: wavy;    
+    font-size: 15px;  
+  }
+  .footer a:hover {    
+    background-color: #326c84;    
+    color: black;  
+  }
+  .footer a:active {    
+    background-color: #ffffff;    
+    color: black;  
   }
   
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
