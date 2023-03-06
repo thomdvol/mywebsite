@@ -133,7 +133,8 @@
   
   .project img {
     width: 100%;
-    height: auto;
+    height: 275px;
+    object-fit: cover;
     transition: transform 0.5s ease;
   }
   
