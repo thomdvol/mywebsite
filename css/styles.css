@@ -83,8 +83,10 @@
 
   .side img{
     height: auto;
-    margin: 10px 0;
-    width: auto;
+    margin: center;
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    padding: 20px;
   }
   
   /* Main column */
