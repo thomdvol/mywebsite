@@ -71,8 +71,9 @@
   .side {
     -ms-flex: 30%; /* IE10 */
     flex: 30%;
-    background-color: #7799a7;
+    background-color: #326c84;
     padding: 20px;
+    color: white;
   }
   
   /* Main column */
