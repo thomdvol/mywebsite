@@ -83,7 +83,7 @@
       
 
       form {
-        max-width: 75%;
+        max-width: 55%;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -93,6 +93,8 @@
         display: block;
         margin-bottom: 10px;
         font-size: 18px;
+        color: white
+
       }
       
       form input, form textarea {
@@ -119,6 +121,7 @@
       }
       
       form input[type="submit"]:hover {
-        background-color: #666;
+        background-color: #ddd;
+        color: black
       }
       
