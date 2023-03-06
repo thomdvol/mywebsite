@@ -1,27 +1,41 @@
 
 <head>
-	<title>Contact</title>
+	<title>Message</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <div class="navbar">
-        <a href="Contact.html">Contact</a>
+        <a href="Contact.html">Message</a>
         <a href="CV.html">CV</a>
         <a href="WIP.html">WIP</a>
         <a href="index.html">Home</a>
     </div>
-    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xdovzdbo" method="post">
-        <fieldset id="fs-frm-inputs">
-          <label for="full-name">Full Name</label>
-          <input type="text" name="name" id="full-name" placeholder="Your first and last name" required="">
-          <label for="email-address">Email Address</label>
-          <input type="email" name="_replyto" id="email-address" placeholder="Your email-adress" required="">
-          <label for="message">Message</label>
-          <textarea rows="5" name="message" id="message" placeholder="Your question..." required=""></textarea>
-          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-        </fieldset>
-        <input type="submit" value="Submit">
-      </form>
+    <div class="contactboxthing">
+       
+        <div class="col2">
+          
+            <div class="gegevens">
+                
+            </div>
+            <div class="col1">
+                <form action="mailto:thomdvol.devoldere@ugent.be" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name..." required="">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email..." required="">
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject..." required="">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Message..." style="height:200px" required=""></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
