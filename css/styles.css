@@ -96,13 +96,9 @@
     background-color: white;
     padding: 20px;
   }
+
   
-  /* Fake image, just for this example */
-  .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-  }
+
   #portfolio {
     background-color: #f5f5f5;
     padding: 50px 0;
