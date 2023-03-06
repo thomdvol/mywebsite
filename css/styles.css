@@ -75,6 +75,11 @@
     padding: 20px;
     color: white;
   }
+
+  .side img{
+    height: auto;
+    margin: 10px 0;
+  }
   
   /* Main column */
   .main {   
