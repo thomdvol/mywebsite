@@ -71,7 +71,7 @@
   .side {
     -ms-flex: 30%; /* IE10 */
     flex: 30%;
-    background-color: #f1f1f1;
+    background-color: #7799a7;
     padding: 20px;
   }
   
@@ -110,7 +110,7 @@
   }
   .footer a:hover {    
     background-color: #326c84;    
-    color: black;  
+    color: black; 
   }
   .footer a:active {    
     background-color: #ffffff;    

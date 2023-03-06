@@ -52,10 +52,7 @@
   }
   
 
-      
-      #text {
-        text-align: center;
-      }
+
       
       .send_message {
         border-radius: 5px;
@@ -80,7 +77,6 @@
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
       }
-      
 
       form {
         max-width: 55%;
@@ -93,8 +89,8 @@
         display: block;
         margin-bottom: 10px;
         font-size: 18px;
-        color: white
-
+        color: white;
+        font-weight: bold;
       }
       
       form input, form textarea {
@@ -104,6 +100,7 @@
         border: 1px solid #ccc;
         margin-bottom: 16px;
         width: 100%;
+        font-family: sans-serif;
       }
       
       form textarea {
