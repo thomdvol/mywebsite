@@ -51,27 +51,27 @@
     }
   }
   
-  .gegevens p {
-    padding-left: 30%;
-    font-size: x-large;
-  }
+
       
-      #tekst {
+      #text {
         text-align: center;
       }
       
-      .contactboxthing {
+      .send_message {
         border-radius: 5px;
-        background-color: #ffffff;
-        padding: 10px;
-      
+        background-color: #326c84;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
-      
+
       .col1 {
         float: right;
-        width: 50%;
-        margin-top: 6px;
-        padding: 20px;
+        width: 100%;
+        margin-top: 20px;
+        padding: 50px;
       }
       
       .col2 {
@@ -81,18 +81,12 @@
         flex-wrap: wrap;
       }
       
-      
-      .gegevens p {
-        padding-left: 30%;
-        font-size: x-large;
-      }
-      
+
       form {
-        max-width: 600px;
+        max-width: 75%;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        padding-left: 180px;
       }
       
       form label {
@@ -101,8 +95,7 @@
         font-size: 18px;
       }
       
-      form input,
-      form textarea {
+      form input, form textarea {
         padding: 12px;
         font-size: 16px;
         border-radius: 4px;
