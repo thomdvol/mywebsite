@@ -67,7 +67,7 @@
   }
 
   .row h3 {
-    color:#326c84;
+    color:#ffffff;
   }
 
   .row a{
@@ -80,7 +80,7 @@
   .side {
     -ms-flex: 30%; /* IE10 */
     flex: 30%;
-    background-color: #134257;
+    background-color: #5c8293;
     padding: 20px;
     color: white;
   }
