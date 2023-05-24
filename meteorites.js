@@ -39,6 +39,7 @@ class Meteorite {
     if (dist(mouseX, mouseY, this.xPos, this.yPos) < 40) {
       this.alive = false;
       gameScore += 10;
+
       // Change the gun color to red
       myRobot.gunColor = color(255, 0, 0);
       myRobot.gunColorTimer = millis();

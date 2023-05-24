@@ -121,8 +121,10 @@ function draw() {
       }
     }
 
-    if (myRobot.laserActive) {
-      gameScore -= 1;
+    if (meteoriteHit) {
+      // nothing happens
+    } else if (myRobot.laserActive) {
+      gameScore -= 1; //if destroyed code -= 1
     }
   }
 }
