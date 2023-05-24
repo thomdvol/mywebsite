@@ -17,11 +17,12 @@ class Meteorite {
     scale(this.meteoriteSize);
 
     noStroke();
-    fill('#8f4a23'); // Brown color for meteorite
-    ellipse(0, 0, 30, 30);
 
     fill(this.flameColor); // change color if it's raining or not
-    triangle(-10, -20, 0, -40, 10, -20);
+    triangle(-10, -10, 0, -40, 10, -10);
+
+    fill('#8f4a23'); // Brown color for meteorite
+    ellipse(0, 0, 30, 30);
 
     pop();
   }
