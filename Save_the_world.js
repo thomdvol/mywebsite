@@ -4,6 +4,7 @@ let meteoriteArmy = [];
 let meteoriteMy;
 let gameScoreCalculated;
 let gameScore;
+let missedMeteoritesCount = 0;
 
 let laserSound;
 let winningSound;
@@ -16,7 +17,7 @@ let nextLevelButton;
 
 let gameOverFlag = false; // Flag to indicate game over state
 let currentLevel = 1; // Current level
-const maxLevel = 5; // Maximum level
+const maxLevel = 6; // Maximum level
 
 function preload() {
   soundFormats('mp3');
@@ -86,20 +87,6 @@ function draw() {
 
     // Draw restart button
     restartButton.show();
-  } else if (currentLevel > maxLevel) {
-    // Draw black screen
-    background(0);
-
-    // Draw "YOU SAVED THE WORLD" text
-    push();
-    textSize(60);
-    textAlign(CENTER);
-    fill('#00ff00');
-    text("YOU SAVED THE WORLD", width / 2, 200);
-    pop();
-
-    // Draw restart button
-    restartButton.show();
   } else {
     // Draw game
     image(backgroundImg, 0, 0);
@@ -123,6 +110,21 @@ function draw() {
 
     if (destroyedMeteorites >= meteoriteArmy.length) {
       levelComplete();
+    }
+
+    // Check for missed meteorites
+    let meteoriteHit = false;
+    for (let i = 0; i < meteoriteArmy.length; i++) {
+      if (meteoriteArmy[i].alive && myRobot.laserActive && meteoriteArmy[i].checkHit()) {
+        meteoriteHit = true;
+        break;
+      }
+    }
+
+    if (meteoriteHit) {
+      gameScore += 5;
+    } else if (myRobot.laserActive) {
+      gameScore -= 1;
     }
   }
 }
@@ -169,32 +171,49 @@ function gameOver() {
   gameOverFlag = true;
   restartButton.show();
   loserSound.play();
+  missedMeteoritesCount = 0; // Reset the missed meteorites count
 }
 
 function levelComplete() {
   if (!gameScoreCalculated) {
-    gameScore = floor(millis() / 1000);
     gameScoreCalculated = true;
     winningSound.play();
+    
   }
-  push();
-  textSize(60);
-  textAlign(CENTER);
-  fill('#00ff00');
-  text("LEVEL " + currentLevel + " COMPLETE", width / 2, 200);
-  pop();
-
-  push();
-  textSize(30);
-  textAlign(CENTER);
-  fill('#00ff00');
-  text("Score: " + gameScore, width / 2, 300);
-  pop();
 
   if (currentLevel < maxLevel) {
+
     nextLevelButton.show();
+    push();
+    textSize(60);
+    textAlign(CENTER);
+    fill('#00ff00');
+    text("LEVEL " + currentLevel + " COMPLETE", width / 2, 200);
+    pop();
+  
+    push();
+    textSize(30);
+    textAlign(CENTER);
+    fill('#00ff00');
+    text("Score: " + gameScore, width / 2, 300);
+    pop();
   } else {
     restartButton.show();
+    // Draw black screen
+    background(0);
+    // Draw "YOU SAVED THE WORLD" text
+    push();
+    textSize(60);
+    textAlign(CENTER);
+    fill('#00ff00');
+    text("YOU SAVED THE WORLD", width / 2, 200);
+    pop();
+    push();
+    textSize(30);
+    textAlign(CENTER);
+    fill('#00ff00');
+    text("Score: " + gameScore, width / 2, 300);
+    pop();
   }
 }
 
@@ -205,6 +224,7 @@ function restart() {
   gameScoreCalculated = false;
   meteoriteArmy = [];
   currentLevel = 1; // Reset to level 1
+  gameScore = 0; // Reset score to zero
   setupLevel(currentLevel); // Set up level 1
 }
 
