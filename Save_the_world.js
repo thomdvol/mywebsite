@@ -17,7 +17,7 @@ let nextLevelButton;
 
 let gameOverFlag = false; // Flag to indicate game over state
 let currentLevel = 1; // Current level
-const maxLevel = 6; // Maximum level
+const maxLevel = 5; // Maximum level
 
 function preload() {
   soundFormats('mp3');
@@ -121,9 +121,7 @@ function draw() {
       }
     }
 
-    if (meteoriteHit) {
-      gameScore += 5;
-    } else if (myRobot.laserActive) {
+    if (myRobot.laserActive) {
       gameScore -= 1;
     }
   }
