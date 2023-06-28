@@ -1,15 +1,17 @@
+// Class representing a robot object in a game.
 class Robot {
   constructor() {
-    this.xPos = 0;
-    this.yPos = 0;
-    this.robotSize = 1;
-    this.bodyColor = color(255);
-    this.laserActive = false;
+    this.xPos = 0; // X position of the robot
+    this.yPos = 0; // Y position of the robot
+    this.robotSize = 1; // Scale factor for the size of the robot
+    this.bodyColor = color(255); // Color of the robot's body
+    this.laserActive = false; // Flag indicating if the robot's laser is active
     this.gunColor = color(0, 0, 255); // Blue color for the gun
-    this.gunColorTimer = 0;
+    this.gunColorTimer = 0; // Timer for tracking the gun color change duration
     this.gunColorDuration = 250; // 0.25 second duration for the gun color change
   }
 
+  // Display the robot on the game screen.
   display() {
     push();
     translate(this.xPos, this.yPos);
@@ -18,7 +20,7 @@ class Robot {
     // Body
     stroke(0);
     fill(this.bodyColor);
-    arc(0, -90, 150, 300, 0, PI);
+    arc(0, -90, 150, 300, 0, PI); //xy coord. arc = (0,-90), width = 150, height = 300, starting angle = pi
 
     // Head
     fill(255);
@@ -40,7 +42,6 @@ class Robot {
     // Mouth
     noFill();
     arc(0, -95, 120, 35, 0, PI);
-  
 
     // Arms
     noFill();
@@ -53,11 +54,13 @@ class Robot {
     pop();
   }
 
+  // Set the robot's position to the center of the screen.
   drive() {
     this.xPos = width / 2;
     this.yPos = height / 1.2;
   }
 
+  // Draw the laser beam if it's active.
   drawLaser() {
     if (this.laserActive) {
       stroke('#FF0000');
@@ -73,6 +76,5 @@ class Robot {
         this.gunColor = color(0, 0, 255); // Reset gun color to blue
       }
     }
-
   }
 }
