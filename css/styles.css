@@ -60,9 +60,9 @@
 
   /* Column container */
   .row {  
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
   }
 
@@ -79,7 +79,7 @@
   /* Create two unequal columns that sits next to each other */
   /* Sidebar/left column */
   .side {
-    -ms-flex: 30%; /* IE10 */
+    -ms-flex: 30%; 
     flex: 30%;
     background-color: #5c8293;
     padding: 20px;
@@ -124,8 +124,8 @@
   }
   
   .row {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /*It allows the child elements to be flex items and enables the use of flexbox properties.*/
+    flex-wrap: wrap; /*rearranges text and forms new row if needed to, when not enough hor. space*/
   }
   
   .col-md-6 {
@@ -134,16 +134,16 @@
   }
   
   .project {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+    position: relative; /*any absolutely positioned elements within the container will be positioned relative to it*/
+    overflow: hidden; /*any content that extends beyond the container's boundaries will be clipped and not visible.*/
+    border-radius: 10px; /*rounded corners*/
   }
   
   .project img {
     width: 100%;
     height: 275px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    object-fit: cover; /*the entire container is filled with the image, crops img. when needed to*/
+    transition: transform 0.5s ease; 
   }
   
   .project:hover img {
@@ -159,7 +159,7 @@
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     transition: transform 0.5s ease;
-    transform: translateY(100%);
+    transform: translateY(100%); /*element moves up*/
   }
   
   .project:hover .project-details {
@@ -191,7 +191,7 @@
     background-color: #333;
     color: #fff;
   }
-  /* Footer */
+  
   .footer {
     padding: 20px;
     text-align: center;
